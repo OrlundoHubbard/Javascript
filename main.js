@@ -1,7 +1,12 @@
-const cookies = 2;
+const select = document.querySelector('select');
+const para = document.querySelector('p');
 
-if (cookies <= 3) {
-  console.log("I'll have just 1, please.");
-} else {
-  console.log("3 is too many");
+select.addEventListener('change', setWeather);
+
+function setWeather() {
+  const choice = select.value;
+
+  if (choice === 'sunny') {
+    para.textContent = ''
+  }
 }
